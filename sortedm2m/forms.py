@@ -23,6 +23,8 @@ else:
 class SortedCheckboxSelectMultiple(forms.CheckboxSelectMultiple):
     class Media:
         js = (
+            'admin/js/vendor/jquery/jquery{}.js'.format('' if settings.DEBUG else '.min'),
+            'admin/js/jquery.init.js',
             'sortedm2m/widget.js',
             'sortedm2m/jquery-ui.js',
         )
